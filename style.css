@@ -332,11 +332,25 @@ body.menu-expanded button {
 
 /*================== FOOTER =================================*/
 
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+#back-to-top {
+  border: 0;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  padding: 0.3rem;
+}
+
 .line-divisor {
   background-color: var(--secondary-color);
   width: 100%;
   height: 0.2rem;
-  display: block;
+  display: inline-block;
 }
 
 footer {
