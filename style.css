@@ -161,7 +161,7 @@ body.menu-expanded button {
 /*================== HOME =================================*/
 
 #home {
-    margin-top: 7rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -176,9 +176,12 @@ body.menu-expanded button {
 }
 
 #home .arrow-down {
-    animation: up-and-down 3s infinite;
+    animation: up-and-down 4s infinite;
     background-color: #e8e80e;
     border-radius: 100%;
+    display: flex;
+    width: 7rem;
+    height: 7rem;
 }
 
 @keyframes up-and-down {
@@ -191,4 +194,39 @@ body.menu-expanded button {
     100% {
         transform: translateY(0rem);
     }
+}
+
+/*================== SERVICES =================================*/
+
+/*================== HAIR =================================*/
+
+#hair h1 {
+    color: var(--bg-light);
+    font-size: 3.2rem;
+}
+
+#hair h1::after {
+    content: "";
+    display: inline-block;
+    width: 55%;
+    height: 0.5rem;
+    background-color: var(--secondary-color);
+    margin-left: 1rem;
+}
+
+#hair ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+#hair ul li {
+    color: var(--bg-light);
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
 }
