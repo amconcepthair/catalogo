@@ -30,6 +30,10 @@ body {
   background-color: var(--primary-color);
 }
 
+.hidden {
+  display: none; /*PARA ESCONDER OS ARTICLES*/
+}
+
 .wrapper {
   width: min(50rem, 100%);
   margin-inline: auto;
@@ -56,7 +60,7 @@ img {
   max-width: 100%;
 }
 
-section {
+section:not(#choose-professional) {
   padding-block: 10rem;
   padding-inline: 2rem;
 }
@@ -75,7 +79,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw;
-  
+
   z-index: 100;
   backdrop-filter: blur(1rem);
 }
@@ -211,9 +215,16 @@ body.menu-expanded button {
 #services article {
   margin-top: 5rem;
 }
-/*================== HAIR =================================*/
 
-#hair ul h3 {
+#services article h3::before {
+  content: "";
+  display: inline-block;
+  width: 5%;
+  height: 0.2rem;
+  background-color: var(--secondary-color);
+}
+
+#services article ul h3 {
   font-size: 2rem;
   color: var(--bg-light);
   text-align: center;
@@ -224,7 +235,7 @@ body.menu-expanded button {
   gap: 1rem;
 }
 
-#hair h3::before {
+#services article h3::after {
   content: "";
   display: inline-block;
   width: 5%;
@@ -232,38 +243,17 @@ body.menu-expanded button {
   background-color: var(--secondary-color);
 }
 
-#hair h3::after {
-  content: "";
-  display: inline-block;
-  width: 5%;
-  height: 0.2rem;
-  background-color: var(--secondary-color);
-}
-
-#hair h2,
-#brush h2,
-#hydration h2,
-#coloring h2,
-#reflex h2,
-#progressive h2,
-#lights h2,
-#relaxing h2 {
+#services article h2 {
   color: var(--bg-light);
   font-size: 2.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  text-align: left;
 }
 
-#hair h2::after,
-#brush h2::after,
-#hydration h2::after,
-#coloring h2::after,
-#reflex h2::after,
-#progressive h2::after,
-#lights h2::after,
-#relaxing h2::after {
+#services article h2::after {
   content: "";
   display: inline-block;
   width: 100%;
@@ -271,14 +261,7 @@ body.menu-expanded button {
   background-color: var(--secondary-color);
 }
 
-#hair ul,
-#brush ul,
-#hydration ul,
-#coloring ul,
-#reflex ul,
-#progressive ul,
-#lights ul,
-#relaxing ul {
+#services article ul {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -286,14 +269,7 @@ body.menu-expanded button {
   gap: 1rem;
 }
 
-#hair ul li,
-#brush ul li,
-#hydration ul li,
-#coloring ul li,
-#reflex ul li,
-#progressive ul li,
-#lights ul li,
-#relaxing ul li {
+#services article ul li {
   color: var(--bg-light);
   font-size: 1.8rem;
   display: flex;
@@ -302,23 +278,43 @@ body.menu-expanded button {
   width: 95%;
 }
 
-/*================== HYDRATION =================================*/
-
-#hydration ul li p {
+#services article ul li p {
   max-width: 75%;
   text-align: left;
 }
 
-/*================== PROGRESSIVE =================================*/
+/*================== AESTHETICS =================================*/
 
-#progressive h2 {
-  text-align: left;
+#choose-professional {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 4rem;
 }
 
-#progressive h2::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 0.2rem;
+#choose-professional .btn-andreia {
+  border: 0;
   background-color: var(--secondary-color);
+  font-size: 2.6rem;
+  padding-block: 1rem;
+  padding-inline: 9%;
+  font-weight: 700;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+#choose-professional .btn-cyntia {
+  border: 0;
+  background-color: var(--secondary-color);
+  font-size: 2.6rem;
+  padding-block: 1rem;
+  padding-inline: 12%;
+  font-weight: 700;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+#choose-professional .btn-andreia:hover,
+#choose-professional .btn-cyntia:hover {
+  filter: brightness(0.8);
 }
