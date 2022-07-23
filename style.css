@@ -283,6 +283,17 @@ body.menu-expanded button {
   text-align: left;
 }
 
+#services article ul li i {
+  opacity: 50%;
+  width: 100%;
+  text-align: start;
+}
+
+#services article ul li i span {
+  float: right;
+}
+
+
 /*================== AESTHETICS =================================*/
 
 #choose-professional {
@@ -317,4 +328,42 @@ body.menu-expanded button {
 #choose-professional .btn-andreia:hover,
 #choose-professional .btn-cyntia:hover {
   filter: brightness(0.8);
+}
+
+/*================== FOOTER =================================*/
+
+.line-divisor {
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 0.2rem;
+  display: block;
+}
+
+footer {
+ padding: 4rem;
+}
+
+footer .credits {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.footer-logo h2 i {
+  font-size: 2rem;
+}
+
+.footer-logo h2 span {
+  color: white;
+}
+
+footer blockquote {
+  color: var(--bg-light);
+  margin-top: 3rem;
+  opacity: 20%;
 }
