@@ -186,7 +186,7 @@ body.menu-expanded button {
         transform: translateY(0rem);
     }
     30% {
-        transform: translateY(10rem);
+        transform: translateY(6rem);
     }
     100% {
         transform: translateY(0rem);
