@@ -8,7 +8,7 @@
   --hue: 170;
   --primary-color: #1b1b1b;
   --secondary-color: #e8e80e;
-  --bg-light: #FFFFFF;
+  --bg-light: #ffffff;
   font-size: 62.5%;
 }
 
@@ -37,12 +37,12 @@ body {
 }
 
 .logo {
-    text-decoration: none;
-    color: var(--secondary-color);
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 .logo h1 span {
-    color: white;
+  color: white;
 }
 
 ul {
@@ -73,6 +73,7 @@ nav {
   top: 0;
   width: 100vw;
   z-index: 100;
+  backdrop-filter: blur(1rem);
 }
 
 nav .wrapper {
@@ -137,14 +138,14 @@ body.menu-expanded .menu {
 .menu ul:nth-child(1) {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 5rem;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
 }
 
 .menu ul:nth-child(1) a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .menu ul li a {
@@ -161,72 +162,157 @@ body.menu-expanded button {
 /*================== HOME =================================*/
 
 #home {
-    margin-top: 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 80vh;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
 }
 
 #home p {
-    color: var(--bg-light);
-    font-size: 4.2rem;
-    line-height: 6rem;
+  color: var(--bg-light);
+  font-size: 4.2rem;
+  line-height: 6rem;
 }
 
 #home .arrow-down {
-    animation: up-and-down 4s infinite;
-    background-color: #e8e80e;
-    border-radius: 100%;
-    display: flex;
-    width: 7rem;
-    height: 7rem;
+  animation: up-and-down 4s infinite;
+  background-color: #e8e80e;
+  border-radius: 100%;
+  display: flex;
+  width: 7rem;
+  height: 7rem;
 }
 
 @keyframes up-and-down {
-    0% {
-        transform: translateY(0rem);
-    }
-    30% {
-        transform: translateY(6rem);
-    }
-    100% {
-        transform: translateY(0rem);
-    }
+  0% {
+    transform: translateY(0rem);
+  }
+  30% {
+    transform: translateY(6rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
 }
 
 /*================== SERVICES =================================*/
 
-/*================== HAIR =================================*/
-
-#hair h1 {
-    color: var(--bg-light);
-    font-size: 3.2rem;
+#services h1:first-child {
+  color: var(--secondary-color);
+  font-size: 3.4rem;
 }
 
-#hair h1::after {
-    content: "";
-    display: inline-block;
-    width: 55%;
-    height: 0.5rem;
-    background-color: var(--secondary-color);
-    margin-left: 1rem;
+#services article {
+  margin-top: 5rem;
+}
+/*================== HAIR =================================*/
+
+#hair h2 {
+  color: var(--bg-light);
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hair h2::after {
+  content: "";
+  display: inline-block;
+  width: 70%;
+  height: 0.2rem;
+  background-color: var(--secondary-color);
 }
 
 #hair ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 2rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+  gap: 1rem;
 }
 
 #hair ul li {
-    color: var(--bg-light);
-    font-size: 1.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+  color: var(--bg-light);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+/*================== BRUSH =================================*/
+
+#brush h2 {
+  color: var(--bg-light);
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#brush h2::after {
+  content: "";
+  display: inline-block;
+  width: 70%;
+  height: 0.2rem;
+  background-color: var(--secondary-color);
+}
+
+#brush ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+#brush ul li {
+  color: var(--bg-light);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+/*================== hydration =================================*/
+
+#hydration h2 {
+  color: var(--bg-light);
+  font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#hydration h2::after {
+  content: "";
+  display: inline-block;
+  width: 70%;
+  height: 0.2rem;
+  background-color: var(--secondary-color);
+}
+
+#hydration ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+#hydration ul li {
+  color: var(--bg-light);
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+#hydration ul li p {
+  max-width: 75%;
+  text-align: left;
 }
